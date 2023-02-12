@@ -30,7 +30,7 @@ def get_by_id(student_id=None, subject=None):
     if not student:
         return 'not found', 404
     #student['student_id'] = student_id
-    print("\n\n TEST test test\n\n")
+    print("\n\n TEST test est\n\n")
     #print(student)
     return student
 
