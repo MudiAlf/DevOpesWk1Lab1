@@ -25,11 +25,13 @@ def add(student=None):
 
 
 def get_by_id(student_id=None, subject=None):
+    print("\n\n TEST test test\n\n")
     student = student_db.get(doc_id=int(student_id))
     if not student:
         return 'not found', 404
-    student['student_id'] = student_id
-    print(student)
+    #student['student_id'] = student_id
+    print("\n\n TEST test test\n\n")
+    #print(student)
     return student
 
 

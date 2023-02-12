@@ -1,7 +1,9 @@
 import connexion
 import six
 
-from swagger_server.service.student_service import *
+from swagger_server.service.student_service import add
+from swagger_server.service.student_service import delete
+from swagger_server.service.student_service import get_by_id
 from swagger_server.models.student import Student  # noqa: E501
 from swagger_server import util
 
@@ -48,5 +50,6 @@ def get_student_by_id(student_id):  # noqa: E501
     :rtype: Student
     """
     if connexion.request.is_json:
+        # body = Student.from_dict(connexion.request.get_json())
         return get_by_id(student_id)
     return 500,'error'
