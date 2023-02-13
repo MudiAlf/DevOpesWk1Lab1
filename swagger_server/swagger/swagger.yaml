@@ -60,6 +60,10 @@ paths:
       responses:
         "200":
           description: Successfully deleted student!
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Student'        
         "400":
           description: Student ID must be an integer!
         "404":
@@ -107,15 +111,16 @@ components:
         gradeRecords:
           type: array
           items:
-            type: number
+            $ref: '#/components/schemas/GradeRecord'
       example:
         student_id: 1
         first_name: Mudi
         last_name: Alfa
         gradeRecords:
-        - 5.5
-        - 7
-        - 10
+        - subject_name: DevOps
+          grade: 8.0
+        - subject_name: SP
+          grade: 7.1
     GradeRecord:
       required:
       - grade
@@ -127,10 +132,7 @@ components:
         grade:
           maximum: 10
           minimum: 0
-          exclusiveMinimum: true
           type: number
-          format: float
       example:
-        subject_name: DevOps
-        grade: 8
-
+        subject_name: Pro
+        grade: 8.0
