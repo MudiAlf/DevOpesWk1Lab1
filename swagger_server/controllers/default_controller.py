@@ -53,4 +53,4 @@ def get_student_by_id(student_id):  # noqa: E501
     # if connexion.request.is_json:
         # body = Student.from_dict(connexion.request.get_json())
     return get_by_id(student_id)
-    # return 500,'error'
+    # return 500,'error' err
