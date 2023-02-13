@@ -1,6 +1,7 @@
 import connexion
 import six
 
+from swagger_server.service.student_service import *
 from swagger_server.service.student_service import add
 from swagger_server.service.student_service import delete
 from swagger_server.service.student_service import get_by_id
