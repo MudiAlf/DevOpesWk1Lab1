@@ -49,7 +49,7 @@ def get_student_by_id(student_id):  # noqa: E501
 
     :rtype: Student
     """
-    if connexion.request.is_json:
+    # if connexion.request.is_json:
         # body = Student.from_dict(connexion.request.get_json())
-        return get_by_id(student_id)
-    return 500,'error'
+    return get_by_id(student_id)
+    # return 500,'error'
