@@ -35,9 +35,9 @@ def delete_student(student_id):  # noqa: E501
 
     :rtype: None
     """
-    if connexion.request.is_json:
-        return delete(student_id)
-    return 500,'error'
+    #if connexion.request.is_json:
+    return delete(student_id)
+    #return 500,'error'
 
 
 def get_student_by_id(student_id):  # noqa: E501
